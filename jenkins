@@ -1,7 +1,7 @@
 pipeline {
 agent any
  stages {
-  stage('Create build output') {
+  stage('Create build archive build') {
    steps {
     script {
      // Make the output directory.
@@ -14,7 +14,7 @@ agent any
    stage('Archive build output') {
     steps {
     // Archive the build output artifacts.
-     archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
+     archiveArtifacts artifacts: 'shreya/*.txt'
      input 'Sure to run the Job ?'
      }
    }
